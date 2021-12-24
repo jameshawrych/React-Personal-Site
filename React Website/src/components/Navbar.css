@@ -1,0 +1,26 @@
+
+a {
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin-left: 2vh;
+    background: #f8f8ff;
+    opacity: 0.9;
+    border-radius: 10px;
+  }
+  
+a:hover, a:active {
+    background-color: #000000;
+    opacity: 0.8;
+    color: white;
+    border-radius: 10px;
+  }
+
+.active {
+    color: #000000;
+    border-radius: 10px;
+    border-color: #000000;
+    border-style: inset;
+  }

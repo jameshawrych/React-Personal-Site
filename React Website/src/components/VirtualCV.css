@@ -1,0 +1,74 @@
+body {
+    background: #f8f8ff;
+    font-size: 16px;
+    color: rgb(53, 53, 53);
+  }
+  
+  .title {
+    font-size: 10em;
+    text-align: center;
+    font: "monaco";
+    color: #ff6961
+  }
+
+.vertical-timeline-element-title{
+    color: #ff6961;
+}
+  
+  h3 {
+    padding-top: 0.25em;
+    font-size: 24px;
+  }
+  
+  h5 {
+    font-size: 18px;
+  }
+
+  .vertical-timeline-element-content {
+    box-shadow: 0 0.25em 0.5em 0 rgba(0, 0, 0, 0.25), 0 0.4em 1.25em 0 rgba(0, 0, 0, 0.15) !important;
+    padding: 2em 3em !important;
+  }
+  
+  .date {
+    color: #ff6961;
+    font-size: 15em;
+  }
+  
+  #description {
+    margin: 1.5em 0 2em 0;
+  }
+  
+  .button {
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    color: white;
+  }
+  
+  .vertical-timeline-element-icon img {
+    display: block;
+    width: 10px;
+    height: 10px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin-left: -12px;
+    margin-top: -12px;
+}
+
+.img {
+  width: 0.1vw
+}
+
+li{
+  padding-bottom: 10px
+}
+
+.wrapper{
+  word-spacing: 4px;
+  display: inline-block;
+}
+
+.outerWrapper{
+  display: inline-block;
+}
