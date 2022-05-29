@@ -17,6 +17,8 @@ import tensorflow from "../images/tensorflow-logo.png"
 import keras from "../images/keras-logo.png"
 import excel from "../images/excel-logo.png"
 import powerpoint from "../images/powerpoint-Logo.png"
+import jenkins from "../images/jenkins-logo.png"
+import mlops from "../images/mlops-logo.png"
 
 const VirtualCV = () => {
 
@@ -46,6 +48,7 @@ const VirtualCV = () => {
               <li>{element.bulletpoint1}</li>
               <li>{element.bulletpoint2}</li>
               {element.bulletpoint3 && <li>{element.bulletpoint3}</li> }
+              {element.bulletpoint4 && <li>{element.bulletpoint4}</li> }
               </ul>
               </p>
 
@@ -63,8 +66,10 @@ const VirtualCV = () => {
                   {element.tensorflow && <img src={tensorflow} width={100} height={35}/>}
                   {element.keras && <img src={keras} width={100}/>}
                   {element.powerpoint && <img src={powerpoint} width={100} height={52}/>}
+                  {element.jenkins && <img src={jenkins} width={100}/>}
                   {element.googlecloud && <img src={GoogleCloud} width={120}/>}
                   {element.apachespark && <img src={SparkLogo} width={85}/>}
+                  {element.mlops && <img src={mlops} width={100}/>}
                 </div>
               </VerticalTimelineElement>
           )
