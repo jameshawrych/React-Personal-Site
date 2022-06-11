@@ -23,10 +23,10 @@ jobs:
             echo "Skip tests"
       - run:
           name: Build App
-          environment:
-            CI: false
           command: |
             cd ~/project/React-Website
+            CI = false
+            echo $CI
             npm run build
       - persist_to_workspace:
           root: ~/project/
