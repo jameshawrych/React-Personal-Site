@@ -25,7 +25,8 @@ jobs:
           name: Build App
           command: |
             cd ~/project/React-Website
-            CI = false
+            echo 'export CI=false' >> $BASH_ENV
+            source $BASH_ENV
             echo $CI
             npm run build
       - persist_to_workspace:
