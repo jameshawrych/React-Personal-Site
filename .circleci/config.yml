@@ -1,15 +1,19 @@
 version: 2.1
 
 orbs:
-  node: circleci/node@8.1.2
+  node: circleci/node@5.0.2
 
 jobs:
   test-node:
     executor: node/default
     steps:
       - checkout
+      -run:
+          name: Version Check
+          command: |
+            npm -v
       - node/install-packages:
-          app-dir: ~/project/React-Website
+          app-dir: ~/project//React-Website
           cache-path: ~/project/React-Website/node_modules
           pkg-manager: npm
       - run:
