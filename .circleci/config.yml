@@ -12,6 +12,8 @@ jobs:
           name: Version Check
           command: |
             npm -v
+            unset CI
+            echo "$CI"
       - node/install-packages:
           app-dir: ~/project/React-Website
           cache-path: ~/project/React-Website/node_modules
@@ -21,8 +23,6 @@ jobs:
           name: Run Tests
           command: |
             echo "Skip tests"
-            echo "$CI"
-            echo "process.env.CI"
       - run:
           name: Build App
           command: |
