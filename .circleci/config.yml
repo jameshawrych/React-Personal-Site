@@ -5,16 +5,19 @@ orbs:
 
 jobs:
   test-node:
-    executor: node/default
+   docker:
+      - image: circleci/node:10.13.0
     steps:
       - checkout
       - run:
           name: Version Check
           command: |
             npm -v
-      - node/install-packages:
-          app-dir: ~/project//React-Website
-          pkg-manager: npm
+      - run:
+          name: Install Packages
+          app-dir: ~/project/React-Website
+          command: |
+            npm install
       - run:
           name: Run Tests
           command: |
