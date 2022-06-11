@@ -21,6 +21,8 @@ jobs:
           name: Run Tests
           command: |
             echo "Skip tests"
+            echo "$CI"
+            echo "process.env.CI"
       - run:
           name: Build App
           command: |
