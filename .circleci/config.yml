@@ -5,19 +5,18 @@ orbs:
 
 jobs:
   test-node:
-    docker:
-      - image: circleci/node:10.13.0
+    executor: node/default
     steps:
       - checkout
       - run:
           name: Version Check
           command: |
             npm -v
-      - run:
-          name: Install Packages
+      - node/install-packages:
           app-dir: ~/project/React-Website
-          command: |
-            npm install
+          cache-path: ~/project/React-Website/node_modules
+          override-ci-command: npm i
+          pkg-manager: npm
       - run:
           name: Run Tests
           command: |
