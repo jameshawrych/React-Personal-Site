@@ -1,0 +1,48 @@
+version: 2.1
+
+orbs:
+  node: circleci/node@5.0.2
+
+jobs:
+  test-node:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages:
+          app-dir: ~/React-Website
+          cache-path: ~/project/React-Website/node_modules
+          pkg-manager: npm
+      - run:
+          name: Run Tests
+          command: |
+            echo "Skip tests"
+      - run:
+          name: Build App
+          command: |
+          cd ~/project/React-Website
+          npm run build
+      - persist_to_workspace:
+          root: ~/project/
+          paths:
+          - .
+  deploy-website:
+    docker:
+      - image: circleci/node:8-browsers
+    working_directory: ~/project/
+    steps:
+      - run: 
+          name: Deploy Website via SSH
+          command: |
+          ssh $SSH_USER@$SSH_HOST "touch test.txt"
+
+ 
+workflows:
+  deploy-website:
+    jobs:
+      - test-node
+      - deploy-website:
+          requires:
+            - test-node
+          filters:
+            branches:
+              only: master
