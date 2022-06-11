@@ -14,7 +14,6 @@ jobs:
             npm -v
       - node/install-packages:
           app-dir: ~/project//React-Website
-          cache-path: ~/project/React-Website/node_modules
           pkg-manager: npm
       - run:
           name: Run Tests
