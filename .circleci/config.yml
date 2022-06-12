@@ -38,6 +38,8 @@ jobs:
       - image: circleci/node:8-browsers
     working_directory: ~/project/
     steps:
+      - attach_workspace:
+          at: ~/project
       - add_ssh_keys:
           fingerprints:
             - "ec:75:b2:b8:de:41:b5:84:72:fb:f4:40:c3:71:72:4e"
