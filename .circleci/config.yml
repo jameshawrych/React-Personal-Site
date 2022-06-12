@@ -47,6 +47,11 @@ jobs:
             echo "PubkeyAuthentication yes" >> ~/.ssh/config
             echo "StrictHostKeyChecking no" >> ~/.ssh/config
       - run: 
+          name: Check Files
+          command: |
+            pwd
+            ls
+      - run: 
           name: Deploy Website via SSH
           command: |
             ssh $SSH_USER@$SSH_HOST "touch test.txt"
