@@ -38,6 +38,10 @@ jobs:
       - image: circleci/node:8-browsers
     working_directory: ~/project/
     steps:
+      - run:
+          name: Establish Host
+          command: |
+            ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
       - run: 
           name: Deploy Website via SSH
           command: |
