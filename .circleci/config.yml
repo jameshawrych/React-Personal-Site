@@ -48,12 +48,13 @@ jobs:
             echo "StrictHostKeyChecking no" >> ~/.ssh/config
       - run: 
           name: Check Files
+          cache-path: ~/project/
           command: |
             pwd
             ls
             cd build
             pwd
-            
+
       - run: 
           name: Deploy Website via SSH
           command: |
