@@ -51,6 +51,9 @@ jobs:
           command: |
             pwd
             ls
+            cd build
+            pwd
+            
       - run: 
           name: Deploy Website via SSH
           command: |
