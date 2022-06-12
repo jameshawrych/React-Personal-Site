@@ -41,7 +41,7 @@ jobs:
       - run:
           name: Establish Host
           command: |
-            ssh-keyscan $SSH_HOST >> ~/.ssh/known_hosts
+            echo -e "Host $SSH_HOST\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
       - run: 
           name: Deploy Website via SSH
           command: |
