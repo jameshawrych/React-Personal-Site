@@ -39,9 +39,8 @@ jobs:
     working_directory: ~/project/
     steps:
       - run:
-          name: Establish Host
-          command: |
-            echo -e "Host $SSH_HOST\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+        name: Update known hosts
+        command: ssh-keyscan -H $SSH_HOST >> ~/.ssh/known_hosts
       - run: 
           name: Deploy Website via SSH
           command: |
