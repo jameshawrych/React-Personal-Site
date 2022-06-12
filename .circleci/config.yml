@@ -39,8 +39,10 @@ jobs:
     working_directory: ~/project/
     steps:
       - run:
-          name: Update known hosts
-          command: ssh-keyscan -H $SSH_HOST >> ~/.ssh/known_hosts
+          name: Check Host
+          command:
+            echo $SSH_HOST
+            echo $SSH_USER
       - run: 
           name: Deploy Website via SSH
           command: |
