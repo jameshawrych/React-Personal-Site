@@ -57,6 +57,7 @@ jobs:
             cd React-Website
             ls
             cd build
+            ls
 
       - run: 
           name: Deploy Website via SSH
