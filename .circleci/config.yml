@@ -58,10 +58,11 @@ jobs:
             ls
             cd build
             ls
-
       - run: 
           name: Deploy Website via SSH
           command: |
+            pwd
+            ls
             ssh $SSH_USER@$SSH_HOST "touch test.txt"
 
  
