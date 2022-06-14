@@ -57,7 +57,7 @@ const Welcome = () => {
 
         <Main>
             <Wrapper>
-            <Text>Hi, and welcome to my website!</Text>
+            <Text>Hi, my name is James and welcome to my website!</Text>
             <Text>I am a software engineer with a particular interest in machine learning and big data. Have a look at my Virtual CV and some projects that I have undertaken.</Text>
             <Text>Feel free to reach out to me on my LinkedIn below!</Text>
             <Text><a href="https://www.linkedin.com/in/james-hawrych/"><img src={linkedin} width={50} /></a><a href="https://github.com/jameshawrych"><img src={github} width={50} /></a></Text>
