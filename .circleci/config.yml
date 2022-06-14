@@ -61,10 +61,9 @@ jobs:
       - run: 
           name: Deploy Website via SSH
           command: |
-            pwd
+            cd React-Website
             ls
-            ssh $SSH_USER@$SSH_HOST "touch test.txt"
-
+            rsync -rv build/ $SSH_USER@$SSH_HOST public_html/
  
 workflows:
   deploy-website:
