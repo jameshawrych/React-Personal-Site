@@ -58,7 +58,7 @@ jobs:
           command: |
             cd React-Website
             ls
-            rsync -rv build/ $SSH_USER@$SSH_HOST public_html/
+            rsync -rv build/ $SSH_USER@$SSH_HOST:public_html/
  
 workflows:
   deploy-website:
