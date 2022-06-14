@@ -49,15 +49,10 @@ jobs:
             echo "PubkeyAuthentication yes" >> ~/.ssh/config
             echo "StrictHostKeyChecking no" >> ~/.ssh/config
       - run: 
-          name: Check Files
+          name: Install rsync
           cache-path: ~/project/
           command: |
-            pwd
-            ls
-            cd React-Website
-            ls
-            cd build
-            ls
+            sudo apt install rsync
       - run: 
           name: Deploy Website via SSH
           command: |
