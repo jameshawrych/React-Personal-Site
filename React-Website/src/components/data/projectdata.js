@@ -24,9 +24,7 @@ export const ProjectData = [
     {
         id:4,
         name:"DevOps Website Integration",
-        description:"After a couple of manual deployments I realised that is was quite labourious to push new versions of my website to the server. Therefore I decided to try my hand at DevOps and integrate my website with CircleCI.\
-        I was able to automate the build, testing and deployment of my website using a yaml configuration file that runs commands on an ephemeral VM that CircleCI spins up when the pipeline runs. The final deployment is acheived by\
-        by connection to the server via SSH and remotely syncing the files that have just been built in the pipeline to the server.  ",
+        description:"After a couple of manual deployments I realised that is was quite labourious to push new versions of my website to the server. Therefore I decided to try my hand at DevOps and integrate my website with CircleCI. I was able to automate the build, testing and deployment of my website using a yaml configuration file that runs commands on an ephemeral VM that CircleCI spins up when the pipeline runs. The final deployment is acheived by connecting to the server via SSH and remotely syncing the files that have just been built in the pipeline to the server.",
         tags:["DevOps", "CircleCI", "Automation", "CI/CD"],
     },
  
