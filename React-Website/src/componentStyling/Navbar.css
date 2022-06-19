@@ -24,3 +24,20 @@ a:hover, a:active {
     border-color: #000000;
     border-style: inset;
   }
+
+.nav {
+  background: none;
+  height: 85px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem calc((100vw - 1000px) / 2);
+  z-index: 12;
+  position: sticky; 
+  top: 0;
+}
+
+.nav-menu{
+  display: flex;
+  align-items: center;
+}

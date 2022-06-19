@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import {motion} from 'framer-motion';
 
 
-import { ProjectData } from "./projectdata.js";
+import { ProjectData } from "./data/projectdata.js";
 import Card from './Card';
 
 const Box = styled.div`
@@ -20,15 +20,6 @@ left:calc(10rem + 15vw);
 height: 40vh;
 display: flex;
 color:white;
-`
-const Rotate = styled.span`
-display:block;
-position: fixed;
-right:1rem;
-bottom: 1rem;
-width: 80px;
-height: 80px;
-z-index:1;
 `
 
 

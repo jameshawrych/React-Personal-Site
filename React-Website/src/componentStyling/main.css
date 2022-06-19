@@ -1,0 +1,57 @@
+body {
+    overflow-y: scroll;
+}
+
+.main {
+    border: 4px solid;
+    border-radius: 20px;
+    padding: 2rem;
+    width: 100%;
+    min-height: 60vh;
+    z-index: 3;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: calc(0.6rem + 1vw);
+    backdrop-filter: blur(4px);
+    font-family: 'Ubuntu Mono', monospace;
+    font-style: italic;
+}
+
+.box {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.bitmoji {
+    position: absolute;
+    top: 5rem;
+    float: right;
+}
+
+.text {
+    color: #ff6961;
+    position: relative;
+    text-align: center;
+    padding: 8px;
+}
+
+.text-wrapper {
+    display: inline
+}
+
+.main-wrapper {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 25%;
+    top: 10rem;
+
+}
