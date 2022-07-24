@@ -19,6 +19,7 @@ import excel from "../images/skillLogos/excel-logo.png"
 import powerpoint from "../images/skillLogos/powerpoint-Logo.png"
 import jenkins from "../images/skillLogos/jenkins-logo.png"
 import mlops from "../images/skillLogos/mlops-logo.png"
+import flask from "../images/skillLogos/flask-logo.png"
 
 const VirtualCV = () => {
 
@@ -70,6 +71,7 @@ const VirtualCV = () => {
                   {element.googlecloud && <img src={GoogleCloud} width={120} alt="googlecloud"/>}
                   {element.apachespark && <img src={SparkLogo} width={85} alt="apachespark"/>}
                   {element.mlops && <img src={mlops} width={100} alt="mlops"/>}
+                  {element.flask && <img src={flask} width={80} alt="flask"/>}
                 </div>
               </VerticalTimelineElement>
           )

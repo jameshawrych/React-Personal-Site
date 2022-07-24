@@ -17,6 +17,7 @@ let timelineElements = [
       googlecloud: 1,
       jenkins: 1,
       mlops: 1,
+      flask: 1,
     },
     {
       id: 2,
