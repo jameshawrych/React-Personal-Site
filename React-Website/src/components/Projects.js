@@ -1,83 +1,23 @@
-import React, { useEffect, useRef } from 'react'
-import styled from 'styled-components'
-import {motion} from 'framer-motion';
-
+import React from 'react'
+import { Carousel } from 'react-responsive-carousel';
+import '../componentStyling/projects.css';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import { ProjectData } from "./data/projectdata.js";
-import Card from './Card';
-
-const Box = styled.div`
-height:400vh;
-position: relative;
-display: flex;
-align-items: center;
-`
-
-const Main = styled(motion.ul)`
-position: fixed;
-top: 17.5%;
-left:calc(10rem + 15vw);
-height: 40vh;
-display: flex;
-color:white;
-`
-
-
-// Framer-motion Configuration
-const container = {
-
-  hidden: {opacity:0},
-  show: {
-    opacity:1,
-
-    transition:{
-      delay: 2,
-      staggerChildren: 0.5,
-      duration: 0.5,
-    }
-  }
-
-}
+import ProjectSlide from './ProjectSlide';
 
 const Projects = () => {
 
-    const ref = useRef(null);
-
-    useEffect(() => {
-        let element = ref.current;
-       
-        const rotate = () => {
-         
-            element.style.transform = `translateX(${-window.pageYOffset}px)`
-         
-            
-             return (
-               'rotate(' + -window.pageYOffset + 'deg)')
-           }
-    
-        window.addEventListener('scroll', rotate)
-        return () => {
-          window.removeEventListener('scroll', rotate);
-          
-        }
-      }, [])
-
-
-
     return (
-<Box>
-
-
-     <Main ref={ref} variants={container} initial='hidden' animate='show'>
+      <div className='project-wrapper'>
+        <Carousel showThumbs={false}>
          {
             ProjectData.map( d => 
-            <Card key={d.id} data={d} />
+            <ProjectSlide key={d.id} data={d} />
             )
          }
-     </Main>
-
-        </Box>
-        
+        </Carousel>
+      </div>
     )
 }
 
