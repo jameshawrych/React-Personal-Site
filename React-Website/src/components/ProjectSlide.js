@@ -26,7 +26,7 @@ const ProjectSlide = (props) => {
                 </div>
                 <div className = "flexRows">
                     <div className = "textBox">
-                        <div className="font">Key Skills:</div>
+                        <div className="font">Key Technologies:</div>
                             {tags.map((t,id) => {
                             return <div className="description-font"key={id}>{t}</div>
                             })}

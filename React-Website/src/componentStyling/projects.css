@@ -122,3 +122,11 @@
 .carousel .control-prev.control-arrow:before {
     border-right: 8px solid #ff6961 !important;
 }
+
+.carousel .control-dots .dot {
+    background: #000000 !important;
+}
+
+.carousel .carousel-status {
+    color: #000000 !important;
+}
