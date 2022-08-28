@@ -109,6 +109,7 @@
     border-width: 0 8px 8px 0;
     transform: rotate(-45deg);
     -webkit-transform: rotate(-45deg);
+    padding: 0.5em;
 }
 
 .carousel .control-prev.control-arrow:before {
@@ -116,7 +117,9 @@
     border-width: 0 8px 8px 0;
     transform: rotate(135deg);
     -webkit-transform: rotate(135deg);
+    padding: 0.5em;
 }
+
 
 .carousel .control-prev.control-arrow:before {
     border-right: 8px solid #ff6961 !important;
